@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import {
     DesktopOutlined,
+    HomeOutlined,
     FileOutlined,
+    BookOutlined,
     PieChartOutlined,
     TeamOutlined,
     UserOutlined,
@@ -18,15 +20,16 @@ function getItem(label, key, icon, children) {
     };
 }
 const items = [
-    getItem('Home', '1', <PieChartOutlined />),
-    getItem('Option 2', '2', <DesktopOutlined />),
-    getItem('User', 'sub1', <UserOutlined />, [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
-        getItem('Alex', '5'),
+    getItem('Home', '1' , <HomeOutlined />),
+    getItem('Courses', 'sub1', <BookOutlined />, [
+        getItem('Module 1', '3'),
+        getItem('Module 2', '4'),
+        getItem('Module 3', '5'),
     ]),
+    getItem('Certificates', '6' , <PieChartOutlined />),
+    getItem('volunteer opportunities', '7' , <PieChartOutlined />),
     getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Files', '9', <FileOutlined />),
+    getItem('Browser game', '9', <DesktopOutlined />),
 ];
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
