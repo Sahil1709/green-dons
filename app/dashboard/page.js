@@ -28,8 +28,10 @@ const items = [
     getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
     getItem('Files', '9', <FileOutlined />),
 ];
+
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
+    const [currentItem, setCurrentItem] = useState("1")
     const {
         token: { colorBgContainer },
     } = theme.useToken();
@@ -41,8 +43,9 @@ const App = () => {
         >
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <div className="demo-logo-vertical" />
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+                <Menu theme="dark" onClick={(e) => setCurrentItem(e.key)} defaultSelectedKeys={['1']} mode="inline" items={items} />
             </Sider>
+
             <Layout>
                 <Header
                     style={{
@@ -50,7 +53,7 @@ const App = () => {
                         background: colorBgContainer,
                     }}
                 />
-                <Content
+                {currentItem == 1 && <Content
                     style={{
                         margin: '0 16px',
                     }}
@@ -72,7 +75,10 @@ const App = () => {
                     >
                         Bill is a cat.
                     </div>
-                </Content>
+                </Content>}
+
+                //TODO: Add for each navigation
+
                 <Footer
                     style={{
                         textAlign: 'center',
