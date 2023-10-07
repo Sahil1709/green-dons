@@ -126,8 +126,8 @@ const App = () => {
                         <Col span={12}>
                             <Card bordered={false}>
                                 <Statistic
-                                    title="Current Expenses"
-                                    value={98231}
+                                    title="Current USF Expenses per person"
+                                    value={57.52}
                                     precision={2}
                                     valueStyle={{ color: '#cf1322' }}
                                     prefix={<ArrowUpOutlined />}
@@ -138,12 +138,12 @@ const App = () => {
                         <Col span={12}>
                             <Card bordered={false}>
                                 <Statistic
-                                    title="Reduced Expenses"
-                                    value={73123}
+                                    title="Diversion rate for 2023 QR3"
+                                    value={53}
                                     precision={2}
                                     valueStyle={{ color: '#3f8600' }}
                                     prefix={<ArrowDownOutlined />}
-                                    suffix="$"
+                                    suffix="%"
                                 />
                             </Card>
                         </Col>
