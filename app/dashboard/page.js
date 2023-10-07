@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import {
     DesktopOutlined,
     HomeOutlined,
-    FileOutlined,
     BookOutlined,
-    PieChartOutlined,
-    TeamOutlined,
-    UserOutlined,
+    GiftOutlined,
+    IdcardOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+
+import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
+import { Card, Col, Row, Statistic } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
     return {
@@ -26,10 +27,9 @@ const items = [
         getItem('Module 2', '4'),
         getItem('Module 3', '5'),
     ]),
-    getItem('Certificates', '6' , <PieChartOutlined />),
-    getItem('volunteer opportunities', '7' , <PieChartOutlined />),
-    getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Browser game', '9', <DesktopOutlined />),
+    getItem('certificates', '6' , <IdcardOutlined />),
+    getItem('volunteer opportunities', '7' , <GiftOutlined />),
+    getItem('Browser game', '8', <DesktopOutlined />),
 ];
 
 const App = () => {
@@ -56,38 +56,41 @@ const App = () => {
                         background: colorBgContainer,
                     }}
                 />
-                {currentItem == 1 && <Content
-                    style={{
-                        margin: '0 16px',
-                    }}
-                >
-                    <Breadcrumb
-                        style={{
-                            margin: '16px 0',
-                        }}
-                    >
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <div
-                        style={{
-                            padding: 24,
-                            minHeight: 360,
-                            background: colorBgContainer,
-                        }}
-                    >
-                        Bill is a cat.
-                    </div>
-                </Content>}
+                {currentItem == 1 && <> <Row gutter={16}>
+    <Col span={12}>
+      <Card bordered={false}>
+        <Statistic
+          title="Current Expenses"
+          value={98231}
+          precision={2}
+          valueStyle={{ color: '#cf1322' }}
+          prefix={<ArrowUpOutlined />}
+          suffix="$"
+        />
+      </Card>
+    </Col>
+    <Col span={12}>
+      <Card bordered={false}>
+        <Statistic
+          title="Reduced Expenses"
+          value={73123}
+          precision={2}
+          valueStyle={{ color: '#3f8600'}}
+          prefix={<ArrowDownOutlined />}
+          suffix="$"
+        />
+      </Card>
+    </Col>
+  </Row></>}
 
-                //TODO: Add for each navigation
+                //TODO: Add for each navigation is this the same
 
                 <Footer
                     style={{
                         textAlign: 'center',
                     }}
                 >
-                    Ant Design ©2023 Created by Ant UED
+                    Ant Design ©2023 Created by GreenDons
                 </Footer>
             </Layout>
         </Layout>
