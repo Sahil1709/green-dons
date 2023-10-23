@@ -19,6 +19,7 @@ import Module4 from "../components/Module4";
 import Module5 from "../components/Module5";
 import Module6 from "../components/Module6";
 import Certificate from "../components/ Certificate";
+import Volunteer from "../components/Volunteer";
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -125,6 +126,7 @@ const App = () => {
         {currentItem == 7 && <Module5 />}
         {currentItem == 8 && <Module6 />}
         {currentItem == 9 && <Certificate />}
+        {currentItem == 10 && <Volunteer />}
 
         <Footer
           style={{
@@ -132,7 +134,7 @@ const App = () => {
             textAlign: "center",
           }}
         >
-          Green-Dons ©2023 Created by Sahil, Deven, Alexia
+          Green-Dons ©2023 Created by Sahil, Deven, Alexia & Puranjai
         </Footer>
       </Layout>
     </Layout>

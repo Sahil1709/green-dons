@@ -59,7 +59,7 @@ const Certificate = () => {
         ))}
       </Row>
       <footer style={{ textAlign: 'center', marginTop: '20px', fontSize: '12px', color: '#888' }}>
-        Green-Dons ©2023 Created by Sahil, Deven, Alexia
+        
       </footer>
     </div>
   );
