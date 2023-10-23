@@ -7,9 +7,8 @@ import {
     GiftOutlined,
     IdcardOutlined,
 } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme, Steps, Divider, Radio, Table, Avatar, Badge, Button } from 'antd';
-import Title from 'antd/es/typography/Title';
-import { ArrowDownOutlined, ArrowUpOutlined, UserOutlined, BellOutlined } from '@ant-design/icons';
+import {  Layout, Menu, theme, Avatar, Badge, Button } from 'antd';
+import {  UserOutlined, BellOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Statistic } from 'antd';
 import Dashboard from '../components/Dashboard';
 import Module1 from '../components/Module1';
@@ -67,6 +66,15 @@ const App = () => {
                         background: colorBgContainer,
                     }}
                 >
+                    <div className='float-left'>
+                    <Row>
+                            <Col>
+                            ADD website logo
+                            </Col>
+                            <Col><h6 className='px-4 font-bold'>GREEN DONS</h6></Col>
+                           
+                        </Row>
+                    </div>
                     <div className='float-right px-6' >
                         <Row>
                             <Col><Badge count={1}>
