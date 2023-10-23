@@ -1,14 +1,5 @@
-import {
-    DesktopOutlined,
-    HomeOutlined,
-    BookOutlined,
-    GiftOutlined,
-    IdcardOutlined,
-} from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme, Steps, Divider, Radio, Table, Avatar, Badge, Button } from 'antd';
-import Title from 'antd/es/typography/Title';
-import { ArrowDownOutlined, ArrowUpOutlined, UserOutlined, BellOutlined } from '@ant-design/icons';
-import { Card, Col, Row, Statistic } from 'antd';
+import { ArrowDownOutlined, ArrowUpOutlined} from '@ant-design/icons';
+import { Card, Col, Row, Statistic ,Steps, Table} from 'antd';
 
 const columns = [
     {
@@ -25,10 +16,6 @@ const columns = [
         title: 'Score',
         dataIndex: 'age',
     },
-    // {
-    //     title: 'Address',
-    //     dataIndex: 'address',
-    // },
 ];
 const data = [
     {
@@ -110,10 +97,6 @@ const Dashboard = () => {
 
             <div className='mx-4 my-10 font-bold text-2xl'>Leaderboards</div>
             <Table
-                // rowSelection={{
-                //     type: selectionType,
-                //     ...rowSelection,
-                // }}
                 columns={columns}
                 dataSource={data}
             />

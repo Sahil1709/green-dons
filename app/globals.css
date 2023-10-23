@@ -7,5 +7,26 @@
     --secondary-color: #2ecc71;
     --font-family: Arial, sans-serif;
   }
+.ant-layout-sider-children {
+  background-color: #00543C;
+}
 
+.ant-menu {
+  background-color: #00543C;
+}
 
+.ant-layout-sider-trigger {
+  background: #3498db;
+  background-color: #00543C !important;
+}
+
+.ant-menu-item {
+  background-color: #00543C;
+}
+
+.ant-menu-sub {
+  background-color: #00543C;
+}
+.ant-menu-inline {
+  background-color: #00543C;
+}
