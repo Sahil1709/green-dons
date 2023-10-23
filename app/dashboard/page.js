@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useState } from 'react';
 import {
     DesktopOutlined,
@@ -6,10 +7,10 @@ import {
     BookOutlined,
     GiftOutlined,
     IdcardOutlined,
+    UserOutlined, 
+    BellOutlined 
 } from '@ant-design/icons';
-import {  Layout, Menu, theme, Avatar, Badge, Button } from 'antd';
-import {  UserOutlined, BellOutlined } from '@ant-design/icons';
-import { Card, Col, Row, Statistic } from 'antd';
+import {  Layout, Menu, theme, Avatar, Badge, Button, Col, Row } from 'antd';
 import Dashboard from '../components/Dashboard';
 import Module1 from '../components/Module1';
 import Module2 from '../components/Module2';
@@ -69,7 +70,12 @@ const App = () => {
                     <div className='float-left'>
                     <Row>
                             <Col>
-                            ADD website logo
+                            <Image
+        src="/USF_LOGO.svg" // Path to your SVG file inside the public directory
+        alt="Example SVG"
+        width={250} // Specify the width of the SVG
+        height={250} // Specify the height of the SVG
+      />
                             </Col>
                             <Col><h6 className='px-4 font-bold'>GREEN DONS</h6></Col>
                            
