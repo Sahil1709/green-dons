@@ -18,6 +18,7 @@ import Module3 from "../components/Module3";
 import Module4 from "../components/Module4";
 import Module5 from "../components/Module5";
 import Module6 from "../components/Module6";
+import Certificate from "../components/ Certificate";
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -123,6 +124,7 @@ const App = () => {
         {currentItem == 6 && <Module4 />}
         {currentItem == 7 && <Module5 />}
         {currentItem == 8 && <Module6 />}
+        {currentItem == 9 && <Certificate />}
 
         <Footer
           style={{

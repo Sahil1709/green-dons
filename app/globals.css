@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --font-family: Arial, sans-serif;
-  }
 .ant-layout-sider-children {
   background-color: #00543C;
 }
@@ -29,4 +24,12 @@
 }
 .ant-menu-inline {
   background-color: #00543C;
+}
+
+.ant-menu-item-active {
+  background-color: #FDBB30;
+}
+
+.ant-menu-item-selected {
+  background-color: #FDBB30 !important;
 }

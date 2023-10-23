@@ -53,7 +53,7 @@ const Dashboard = () => {
                 <Col span={12}>
                     <Card bordered={false}>
                         <Statistic
-                            title="Current USF Expenses per person"
+                            title="Waste Cost Per Person"
                             value={57.52}
                             precision={2}
                             valueStyle={{ color: '#cf1322' }}

@@ -1,4 +1,4 @@
-import { Card, Image, Typography, Layout, Progress, Statistic } from 'antd';
+import { Card, Image, Typography, Layout, Progress } from 'antd';
 
 const { Title, Paragraph } = Typography;
 const { Content, Sider } = Layout;
@@ -29,7 +29,7 @@ const Module1 = () => {
         <Image
           width="100%"
           height="80%"
-          src="./create-videos-online-courses-cover-coursifyme.jpg"
+          src="./module_1.jpeg"
           alt="Course Content for Module 1"
           style={{ borderRadius: '10px', boxShadow: '0 3px 6px rgba(0,0,0,0.1)', margin: '0 auto' }}
         />
