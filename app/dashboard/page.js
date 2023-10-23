@@ -8,9 +8,17 @@ import {
     IdcardOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme, Steps, Divider, Radio, Table, Avatar, Badge, Button } from 'antd';
-
+import Title from 'antd/es/typography/Title';
 import { ArrowDownOutlined, ArrowUpOutlined, UserOutlined, BellOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Statistic } from 'antd';
+import Dashboard from '../components/Dashboard';
+import Module1 from '../components/Module1';
+import Module2 from '../components/Module2';
+import Module3 from '../components/Module3';
+import Module4 from '../components/Module4';
+import Module5 from '../components/Module5';
+import Module6 from '../components/Module6';
+
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
     return {
@@ -26,57 +34,13 @@ const items = [
         getItem('Module 1', '3'),
         getItem('Module 2', '4'),
         getItem('Module 3', '5'),
+        getItem('Module 4', '6'),
+        getItem('Module 5', '7'),
+        getItem('Module 6', '8'),
     ]),
-    getItem('certificates', '6', <IdcardOutlined />),
-    getItem('volunteer opportunities', '7', <GiftOutlined />),
-    getItem('Browser game', '8', <DesktopOutlined />),
-];
-
-const columns = [
-    {
-        title: "Rankings",
-        dataIndex: 'key'
-    },
-
-    {
-        title: 'Name',
-        dataIndex: 'name',
-        render: (text) => <a>{text}</a>,
-    },
-    {
-        title: 'Score',
-        dataIndex: 'age',
-    },
-    // {
-    //     title: 'Address',
-    //     dataIndex: 'address',
-    // },
-];
-const data = [
-    {
-        key: '1',
-        name: 'Alexia Tata',
-        age: 99,
-        address: 'New York No. 1 Lake Park',
-    },
-    {
-        key: '2',
-        name: 'Deven Varu',
-        age: 32,
-        address: 'London No. 1 Lake Park',
-    },
-    {
-        key: '3',
-        name: 'Sahil Gupta',
-        age: 12,
-        address: 'Sydney No. 1 Lake Park',
-    },
-    {
-        key: '4',
-        name: 'Puranjai Garg',
-        age: 0,
-        address: 'Sydney No. 1 Lake Park',
-    },
+    getItem('certificates', '9', <IdcardOutlined />),
+    getItem('volunteer opportunities', '10', <GiftOutlined />),
+    getItem('Browser game', '11', <DesktopOutlined />),
 ];
 
 const App = () => {
@@ -119,71 +83,19 @@ const App = () => {
 
                     </div>
                 </Header>
-                {currentItem == 1 && <>
-                    <div className=' mx-4 my-10 font-bold text-2xl'>Current USF Expenses</div>
-                    <Row gutter={16}>
 
-                        <Col span={12}>
-                            <Card bordered={false}>
-                                <Statistic
-                                    title="Current USF Expenses per person"
-                                    value={57.52}
-                                    precision={2}
-                                    valueStyle={{ color: '#cf1322' }}
-                                    prefix={<ArrowUpOutlined />}
-                                    suffix="$"
-                                />
-                            </Card>
-                        </Col>
-                        <Col span={12}>
-                            <Card bordered={false}>
-                                <Statistic
-                                    title="Diversion rate for 2023 QR3"
-                                    value={53}
-                                    precision={2}
-                                    valueStyle={{ color: '#3f8600' }}
-                                    prefix={<ArrowDownOutlined />}
-                                    suffix="%"
-                                />
-                            </Card>
-                        </Col>
-                    </Row>
-                    <div className='mx-4 my-10 font-bold text-2xl'>Current course progress</div>
-                    <Steps
-                        current={1}
-                        items={[
-                            {
-                                title: 'Finished',
-                                description: "Module 1",
-                            },
-                            {
-                                title: 'In Progress',
-                                description: "Module 2",
-                                subTitle: 'Left 00:00:08',
-                            },
-                            {
-                                title: 'Waiting',
-                                description: "Module 3",
-                            },
-                        ]}
-                    />
+                {currentItem == 1 && <Dashboard />}
+                {currentItem == 3 && <Module1 />}
+                {currentItem == 4 && <Module2 />}
+                {currentItem == 5 && <Module3 />}
+                {currentItem == 6 && <Module4 />}
+                {currentItem == 7 && <Module5 />}
+                {currentItem == 8 && <Module6 />}
 
-                    <div className='mx-4 my-10 font-bold text-2xl'>Leaderboards</div>
-                    <Table
-                        // rowSelection={{
-                        //     type: selectionType,
-                        //     ...rowSelection,
-                        // }}
-                        columns={columns}
-                        dataSource={data}
-                    />
-
-                </>}
-
-                {/* //TODO: Add for each navigation is this the same */}
 
                 <Footer
                     style={{
+                        backgroundColor: 'white',
                         textAlign: 'center',
                     }}
                 >
