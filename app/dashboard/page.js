@@ -77,7 +77,7 @@ const App = () => {
         height={250} // Specify the height of the SVG
       />
                             </Col>
-                            <Col><h6 className='px-4 font-bold'>GREEN DONS</h6></Col>
+                            <Col><h6 className='px-4 font-bold text-green-800 text-xl mt-3'>GREEN DONS</h6></Col>
                            
                         </Row>
                     </div>
